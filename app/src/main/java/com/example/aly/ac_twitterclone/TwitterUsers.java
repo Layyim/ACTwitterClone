@@ -38,7 +38,7 @@ public class TwitterUsers extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_twitter_users);
 
         FancyToast.makeText(this, "Welcome " +
-                ParseUser.getCurrentUser().getUsername(), Toast.LENGTH_SHORT,
+                ParseUser.getCurrentUser().getUsername(), Toast.LENGTH_LONG,
                 FancyToast.INFO, true).show();
 
         listView = findViewById(R.id.listView);
@@ -122,8 +122,8 @@ public class TwitterUsers extends AppCompatActivity implements AdapterView.OnIte
 
             case R.id.sendTweetItem:
 
-/*                Intent intent = new Intent(TwitterUsers.this, SendTweetActivity.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(TwitterUsers.this, SendTweetActivity.class);
+                startActivity(intent);
 
                 break;
         }
